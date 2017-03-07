@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add a Recipe
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (submit)="onClick()">
+    <ion-list>
+      <!--Title Input -->
+      <ion-item>
+        <ion-label color="primary" stacked>Recipe Title</ion-label>
+        <ion-input type="text" placeholder="Recipe title input" name="title" [(ngModel)]="title"></ion-input>
+      </ion-item>
+      <!--Short Description Input -->
+      <ion-item>
+        <ion-label color="primary" stacked>Short Description</ion-label>
+        <ion-input type="text" placeholder="Short description goes here..." name="shortDescription" [(ngModel)]="shortDescription"></ion-input>
+      </ion-item>
+      <!--Long Description Input -->
+      <ion-item>
+        <ion-label color="primary" stacked>Long Description</ion-label>
+        <ion-textarea type="textarea" placeholder="Write out recipe here!" name="longDescription" [(ngModel)]="longDescription"></ion-textarea>
+      </ion-item>
+      <!--Recipe Type -->
+      <ion-item>
+          <ion-label fixed>Recipe Type</ion-label>
+          <ion-select [(ngModel)]="type" name="type">
+              <ion-option value="Appetizer"> Appetizer </ion-option>
+              <ion-option value="Main Course"> Main Course </ion-option>
+              <ion-option value="Dessert"> Dessert </ion-option>
+              <ion-option value="Drink"> Drink </ion-option>
+          </ion-select>
+      </ion-item>
+      <!--Add Button -->
+      <ion-item>
+        <button ion-button type="submit">Add Recipe!</button>
+      </ion-item>
+    </ion-list>
+  </form>
+
+
+</ion-content>

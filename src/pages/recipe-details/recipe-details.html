@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Recipe Details
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>{{recipe.title}}</h1>
+  <h4>{{recipe.shortDescription}}</h4>
+  <h5>{{recipe.type}}</h5>
+  <p>Recipe: <br/>{{recipe.longDescription}}</p>
+  <button ion-button color="secondary" (click)="editRecipe($event, recipe)">Edit Recipe</button>
+  <button ion-button color="danger" (click)="deleteRecipe(recipe._id.$oid)">Delete Recipe</button>
+</ion-content>

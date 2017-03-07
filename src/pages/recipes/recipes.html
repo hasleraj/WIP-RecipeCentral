@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-searchbar placeholder="Search Recipes"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <!--
+  <ion-spinner></ion-spinner>-->
+  <ion-card *ngFor="let recipe of recipes" (click)="selectMe($event, recipe)">
+    <ion-card-header>
+      {{recipe.title}}
+    </ion-card-header>
+    <ion-card-content>
+      {{recipe.shortDescription}}    
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
